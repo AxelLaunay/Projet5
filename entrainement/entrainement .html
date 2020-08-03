@@ -116,6 +116,64 @@
 				"/nVariable y :" + y +
 				 " /nVariable z :" + z +);
 
+		//condition
+
+		var x = 7, y = 14;
+
+		var vrai = x < y;
+		var faux = 14 <= 7;
+
+		var egalval = 4 == "4";
+		var egalvaltype = 4 === "4";
+
+		var difval = 4 != "4";
+		var difvaltype = 4 !== "4";
+
+		alert("vrai stocke :" + vrai +
+			  "\nfaux stocke : " + faux +
+			  "\nnegalval stocke : " + egalval +
+			  "\negalvaltype stocke : " + egalvaltype +
+			  "\ndifval stocke : " + difval + 
+			  "\ndifvaltype stocke :" + difvaltype);
+
+
+		// les condition if, if else , else if ...
+
+		var heure = 15;
+
+		if (heure <= 18 == true){
+			alert("bonjour");
+		}
+
+
+		var heure = 15;
+
+		if (heure <= 18 == true){
+			alert("bonjour")
+		}
+		else{
+			alert("bonsoir")
+		}
+
+
+		var heure = 9;
+
+		if (heure < 12 == true){
+			alert("c'est le matin");
+		}
+		else if (heure == 12 == true ){
+			alert ("il est midi");
+		}
+		else if (heure <= 18 == true ){
+			alert ("c'est l'apres midi");
+		}
+		else{
+			alert("c'est le soir")
+		}
+
+		
+
+
 
 
 

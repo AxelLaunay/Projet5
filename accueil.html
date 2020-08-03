@@ -1,29 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Orinoco</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet"  href="styleAcceuil.css">
-	<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Orinoco</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styleAcceuil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
 <body>
-		<main>
-			<nav>
-				<p class="menu">
-					Menu
-				</p>
-			</nav>
+<main>
+    <section class="hautDePage">
+        <nav>
+            <i class="fas fa-bars"></i>
+                <div class="menu"></div>
+        </nav>
 
-			<div class="disposition">
-				<div class="logo">
-					<img id="imgLogo" src="image/orinoco.png">
-				</div>
+        <div class="disposition">
+            <div class="logo">
+                <img id="imgLogo" src="image/orinoco.png">
+            </div>
 
-				<div class="menuDefilant"></div>
-			</div>
-			<div class="menuUtilisateur">
-				<i class="fas fa-user"></i>
-			</div>
-		</main>
+            <div class="sliderMenu">
+                <div class="gallery">
+                    <img class="imgTeddies" id="slider" src="image/slider_img/teddy_4.jpg" alt="img_nounours">
+                </div>
+            </div>
+        </div>
+
+        <!-- ajout de javascript -->
+        <script>
+            var image = document.getElementById('slider');
+
+            var images = ['teddy_4.jpg', 'vcam_4.jpg', 'oak_3.jpg'];
+
+            var x = 0;
+
+            setInterval(slider, 2000);
+
+            function slider() {
+                if (x < images.length) {
+                    
+                    x = x + 1;
+                } else {
+                    x = 1;
+                }
+
+                image.setAttribute("src","image/slider_img/"+images[x - 1])
+            }
+
+            
+        </script>
+
+        <div class="menuDeroulantUtilisateur">
+            <div class="menuUtilisateur">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="backgroundMenuUtilisateur">
+                <a href="" class="comptUtilisateur">Mon Compte</a>
+                <a href="pagePannier.html" class="pannierUtilisateur">Pannier</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="basDePage">
+        <div class="container">
+
+            <div class="article"></div>
+
+            <div class="article"></div>
+
+            <div class="article"></div>
+
+        </div>
+
+    </section>
+
+</main>
 </body>
 </html>
