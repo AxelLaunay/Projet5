@@ -34,7 +34,7 @@
 
             var x = 0;
 
-            setInterval(slider, 2000);
+            setInterval(slider, 3000);
 
             function slider() {
                 if (x < images.length) {
@@ -71,6 +71,58 @@
             <div class="article"></div>
 
         </div>
+
+        <!-- chargement des tableaux-->
+        <script>
+            var request = new XMLHttpRequest();
+
+            request.onreadystatechange = function() {
+            if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                var cameras = JSON.parse(this.responseText);
+                console.log(cameras);
+                cameras.forEach(camera => {
+                    console.log(camera.name)
+                    
+                });
+              }
+            };
+            request.open("GET", "http://localhost:3000/api/cameras");
+            request.send();
+
+            var request = new XMLHttpRequest();
+
+            request.onreadystatechange = function() {
+                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                    var furnitures = JSON.parse(this.responseText);
+                    console.log(furnitures);
+                    furnitures.forEach(furniture => {
+                        console.log(furniture.name)
+                    });
+                }
+            }
+
+            request.open("GET" , "http://localhost:3000/api/furniture");
+            request.send();
+
+            
+            var request = new XMLHttpRequest();
+
+            request.onreadystatechange = function() {
+                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+                    var teddies = JSON.parse(this.responseText);
+                    console.log(teddies);
+                    teddies.forEach(teddy => {
+                        console.log(teddy.name)
+                    });
+                }
+            }
+
+            request.open("GET" , "http://localhost:3000/api/teddies");
+            request.send();
+            
+            //recuperation des element 
+
+        </script>
 
     </section>
 
