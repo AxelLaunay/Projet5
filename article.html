@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orinoco</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="styleAcceuil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+<script>
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function() {
+        if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
+            var cameras = JSON.parse(this.responseText);
+            console.log(cameras);
+
+        }
+    }
+
+    request.open ("GET" , "http://localhost:3000/api/cameras/?id");
+    request.send();
+</script>
+</body>

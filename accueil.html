@@ -3,6 +3,7 @@
 <head>
     <title>Orinoco</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleAcceuil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 </head>
@@ -26,7 +27,7 @@
             </div>
         </div>
 
-        <!-- ajout de javascript -->
+        <!-- ajout de slider -->
         <script>
             var image = document.getElementById('slider');
 
@@ -62,13 +63,7 @@
     </section>
 
     <section class="basDePage">
-        <div class="container">
-
-            <div class="article"></div>
-
-            <div class="article"></div>
-
-            <div class="article"></div>
+        <div id="container">
 
         </div>
 
@@ -82,44 +77,44 @@
                 console.log(cameras);
                 cameras.forEach(camera => {
                     console.log(camera.name)
-                    
+
+                  var container = document.getElementById("container");
+                    var article = document.createElement("a");
+                    article.setAttribute("href", "article.html?id="+camera._id)
+                    article.className = "article";
+
+                   var name = document.createElement("span");
+                    name.className = "articleName";
+                    name.textContent = camera.name;
+                    article.appendChild(name);
+
+                    var imageUrl = document.createElement("img");
+                    imageUrl.className = "articleImage";
+                    imageUrl.setAttribute ("src",camera.imageUrl);
+                    article.appendChild(imageUrl);
+
+                    var description = document.createElement("span");
+                    description.className = "articleDescription";
+                    description.textContent = " " + camera.description;
+                    article.appendChild(description);
+
+                    var price = document.createElement("span");
+                    price.className = "articlePrice";
+                    price.textContent = " " + (camera.price) /100 +" €";
+                    article.appendChild(price);
+
+
+                    //article.textContent = camera.name + " " +camera.price;
+                    container.appendChild(article);
+
+
+
+
                 });
               }
             };
             request.open("GET", "http://localhost:3000/api/cameras");
             request.send();
-
-            var request = new XMLHttpRequest();
-
-            request.onreadystatechange = function() {
-                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                    var furnitures = JSON.parse(this.responseText);
-                    console.log(furnitures);
-                    furnitures.forEach(furniture => {
-                        console.log(furniture.name)
-                    });
-                }
-            }
-
-            request.open("GET" , "http://localhost:3000/api/furniture");
-            request.send();
-
-            
-            var request = new XMLHttpRequest();
-
-            request.onreadystatechange = function() {
-                if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-                    var teddies = JSON.parse(this.responseText);
-                    console.log(teddies);
-                    teddies.forEach(teddy => {
-                        console.log(teddy.name)
-                    });
-                }
-            }
-
-            request.open("GET" , "http://localhost:3000/api/teddies");
-            request.send();
-            
             //recuperation des element 
 
         </script>
