@@ -4,22 +4,58 @@
     <title>Orinoco</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="styleAcceuil.css">
+    <link rel="stylesheet" href="styleArticle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="ScriptArticle.js"></script>
 </head>
 <body>
-<script>
-    var request = new XMLHttpRequest();
 
-    request.onreadystatechange = function() {
-        if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-            var cameras = JSON.parse(this.responseText);
-            console.log(cameras);
+    <main>
+        <section class="hautDePage">
+            <nav>
+                <i class="fas fa-bars"></i>
+                    <div class="menu"></div>
+            </nav>
 
-        }
-    }
+            <div class="menuDeroulantUtilisateur">
+                <div class="menuUtilisateur">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="backgroundMenuUtilisateur">
+                    <a href="Formulaire.html" class="comptUtilisateur">Mon Compte</a>
+                    <a href="pagePannier.html" class="pannierUtilisateur">Pannier</a>
+                </div>
+            </div>
+        </section>
 
-    request.open ("GET" , "http://localhost:3000/api/cameras/?id");
-    request.send();
-</script>
+        <section class="dispositionParam">
+            <section id="parametre">
+
+            </section>
+
+            <section class="articleIMG">
+                <div id ="positionIMG">
+
+                </div>
+            </section>
+
+            <section id="name">
+                <div id="positionName">
+
+                </div>
+            </section>
+
+            <section id="cart">
+                <div class="positionAjoutPannier">
+                    <a id="ajoutPannier">
+                        <i class="fas fa-cart-plus"></i>
+                        <input type="submit" value="Ajouter Au Pannier" name="ajoutPannier" class="boutonAjoutPannier">
+                    </a>
+                </div>
+            </section>
+
+           
+        </section>
+
+    </main>
 </body>

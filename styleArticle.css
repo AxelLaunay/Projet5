@@ -1,20 +1,16 @@
-body {
-    font-family: Source Serif Pro Semibold, segoe print, serif;
-    margin: 0;
-    background-color: rgb(64, 64, 64);
+body{
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background: rgb(27,27,27);
+    background: linear-gradient(115deg, rgba(27,27,27,1) 0%, rgba(68,68,68,1) 35%, rgba(92,92,92,1) 100%);
 }
-
 main {
     display: flex;
     flex-direction: column;
-    background-image: url("image/backGround.jpg");
-    background-repeat: no-repeat;
-    background-position-x: right;
+  
+}
 
-}
-.hautDePage{
-    display: flex;
-}
 .menu {
     position: absolute;
     top: -90px;
@@ -55,61 +51,6 @@ nav:hover .fa-bars{
     z-index: 9;
 }
 
-.disposition {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%
-}
-
-.logo {
-    width: 25%;
-    margin: 2% auto;
-}
-
-#imgLogo {
-    width: 80%;
-    height: 65%;
-    border-radius:20%;
-    border: solid 4px;
-
-}
-
-.sliderMenu {
-    background-color: #fcfafa;
-    width: 35%;
-    height: 10%;
-    border: solid 4px;
-    border-color: #000000;
-    border-radius: 5%;
-    padding-bottom: 18%;
-    margin: -2% auto auto 30%;
-}
-
-.imgTeddies{
-width: 32%;
-height:274px;
-position: absolute;
-left: 482px;
-
-}
-
-.imgTeddies{
-    animation: ani 2s linear;
-}
-
-@keyframes ani {
-    0% {
-      transform: scale(1.2);
-    }
-    10% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
 .fa-user{
     font-weight: 600;
     z-index: 9;
@@ -122,7 +63,6 @@ left: 482px;
     top: 15px;
     right: 15px;
 }
-
 
 .backgroundMenuUtilisateur{
     display: none;
@@ -154,32 +94,109 @@ left: 482px;
     right: 10%;
     top: 15%;
 }
-.basDePage{
+
+.dispositionParam{
     display: flex;
-}
-#container{
-    display: flex;
-    margin-left: 10%;
-    flex-wrap: wrap;
-    text-align: center;
-}
-.article{
-    text-decoration: none;
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5%;
-    align-items: center;
-    width: 450px;
-    border: solid;
-    border-color: #5d5dfc;
-    margin-top: 95px;
-    margin-left: 100px;
-    background-color: white;
+    margin-top: 15%;
 }
 
-.articleImage
-{
-    height: 150px;
-    width: 240px;
+.articleIMG{
+    width: 35%;
+}
+
+#positionIMG{
+    width: 90%;
+    margin: 0% auto auto 0%;
+}
+
+.imageCamera{
+    width: 100%;
+    border-radius: 4%;
+    border: solid 4px;
+    border-color: #000000;
+    border-radius: 5%;
+
+}
+
+#parametre{
+    width: 20%;
+}
+
+#pParam {
+    background-color: #fcfafa;
+    width: 70%;
+    border: solid 4px;
+    border-color: #000000;
+    border-radius: 5%;
+    margin: 2% auto auto 14%;
+}
+
+/*#positionParam_2{
+    background-color: #fcfafa;
+    width: 70%;
+    border: solid 4px;
+    border-color: #000000;
+    border-radius: 5%;
+    margin: 2% auto auto 14%;
+}
+*/
+
+.paramChoix{
+width: 100%;
+}
+
+.paramChoix_1{
+    margin: 3%;
+}
+
+.paramChoix_2{
+    margin: 3%;
+}
+
+#name{
+    width: 25%;
+}
+
+#positionName{
+    width: 100%;
+    margin: -5% 0 0 30%;
+}
+
+.cameraName{
+font-size: 2.5em;
+color: white;
+font-weight: bold;
+margin-bottom: 20%;
+}
+
+.articleDescription{
+    width: 100%;
+    color: darkgray;
+    margin-bottom: 20%;
+}
+
+.articlePrice{
+    color: white;
+    font-size: 2em;
+
+}
+
+#cart{
+    margin: 16.2% 0 0 -3%;
+}
+
+.positionAjoutPannier{
+    display: flex;
+    align-items: center;
+}
+
+.fa-cart-plus{
+    font-size: 2.5em;
+    color: #5d5dfc;
+}
+
+.boutonAjoutPannier{
+    font-size: 1.2em;
+    margin-left: 12%;
+    color: #5d5dfc;
 }
