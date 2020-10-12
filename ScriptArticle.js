@@ -32,15 +32,19 @@ var id = url.searchParams.get("id");
             var ajoutPannier = document.getElementById("ajoutPannier");
             ajoutPannier.addEventListener("click" , function(){
                 var url = "pagePannier.html?id=" +id
+                var didFound = false
                 tableauRadio.forEach((bouton, index) =>{
                     if (bouton.checked) {
                         url  += "lense=" + index;
                         window.location.replace(url)
+                        didFound = true
                         return
                     }
                 })
-
-                alert("ya r")
+                if(!didFound){
+                    alert("ya r")
+                }
+               
             })
 
             var positionIMG = document.getElementById("positionIMG");
