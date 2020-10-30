@@ -10,20 +10,39 @@
 <body>
     <main>
 
+        <nav>
+            <i class="fas fa-bars"></i>
+                <div class="menu"></div>
+        </nav> 
 
+        <div class="menuDeroulantUtilisateur">
+            <div class="menuUtilisateur">
+                <i class="fas fa-user"></i>
 
-        <!--formulaire parge pannier-->
-        <form>
-            <input type="text" name="prenom" placeholder="Prenom" id="Prenom" maxlength="20">
-            <span id="prenomNull"></span>
-            <input type="text" name="nom" placeholder="Nom" required id="nom" maxlength="20">
-            <input type="text" name="age" placeholder="Age" id="age" maxlength="2">
-            <input type="email" name="email" placeholder="Email" id="email" maxlength="30">
-            <input type="email" name="email2" placeholder="Email Confirmation" id="email2" maxlength="30">
-            <input type="text" name="adresse" placeholder="adresse" id="adresse" maxlength="50">
-            <input type="submit" value="Envoyer" id="inscription">
-        </form>
+            <section id="basPage">    
+                
+                <section id="infoProduit">
+                    <div id="container"></div>
+                    <div id = "positionName"></div>
+                    <div id = "positionParam"></div>
+                </section>
+
+            <!--<div id="separationBare"></div>-->
+                <section id="formulaire">
+                    <!--formulaire parge pannier-->
+                    <form id="form" action="pagecConfirmation.html">
+                        <input type="text" name="prenom" placeholder="Prenom" id="Prenom" class="formStyle" maxlength="20">
+                        <span id="prenomNull"></span>
+                        <input type="text" name="nom" placeholder="Nom" required id="nom" class="formStyle" maxlength="20">
+                        <input type="text" name="age" placeholder="Age" id="age" class="formStyle" maxlength="2">
+                        <input type="email" name="email" placeholder="Email" id="email" class="formStyle" maxlength="30">
+                        <input type="email" name="email2" placeholder="Email Confirmation" id="email2" class="formStyle" maxlength="30">
+                        <input type="text" name="adresse" placeholder="adresse" id="adresse" class="formStyle"maxlength="50">
+                        <input type="submit" value="Acheter" id="inscription">
+                    </form>
+                </section>
+            </section>
     </main>
 </body>
-<script src="ScriptPannier.js">script pannier</script>
+<script src="ScriptPannier.js">scriptPannier</script>
 </html>
