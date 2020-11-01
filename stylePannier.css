@@ -1,0 +1,198 @@
+body{
+    width: 99%;
+    height: 99%;
+    background-attachment: fixed;
+    background: rgb(27,27,27);
+    background: linear-gradient(115deg, rgba(27,27,27,1) 0%, rgba(68,68,68,1) 35%, rgba(92,92,92,1) 100%);
+}
+
+.menu {
+    position: absolute;
+    top: -90px;
+    left: -90px;
+    display: flex;
+    background-color: lawngreen;
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    border-radius: 100%;
+    opacity: 75%;
+
+}
+
+.fa-bars{
+    z-index: 10;
+    font-size: 2.5em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.fa-bars:hover + .menu {
+    z-index: 11;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    background-color: lawngreen;
+    width: 180px;
+    height: 97%;
+    margin: 0;
+    border-radius: 2%;
+    opacity: 100%;
+}
+nav:hover .fa-bars{
+    z-index: 9;
+}
+
+.fa-user{
+    font-weight: 600;
+    z-index: 9;
+    font-size: 1.5em;
+    border: solid;
+    border-radius: 38%;
+    padding: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.backgroundMenuUtilisateur{
+    display: none;
+    z-index: 8;
+    border: solid;
+    border-radius: 2%;
+    background-color: lawngreen;
+    opacity: 95%;
+    padding-left: 15%;
+    padding-bottom: 32.3%;
+    position: absolute;
+    top: 0px;
+    right: -2px;
+}
+.menuDeroulantUtilisateur:hover .backgroundMenuUtilisateur{
+    display: block;
+}
+
+.comptUtilisateur{
+    font-size: 1.5em;
+    position: absolute;
+    top: 5%;
+    right: 35%;
+}
+
+.pannierUtilisateur{
+    font-size: 1.5em;
+    position: absolute;
+    right: 10%;
+    top: 15%;
+}
+
+#basPage{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#infoProduit{
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+#container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#positionIMG{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageCamera{
+    width: 70%;
+    border: solid 5px;
+    border-radius: 5%;
+}
+
+#separationBare{
+    border-top: solid 4px black;
+}
+
+#positionName{
+ width: 100%;
+ text-align: center;
+}
+
+.cameraName{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: lawngreen;
+}
+
+#positionParam{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.articleDescription{
+    width: 70%;
+    text-align: center;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.lentilChoisi{
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.603);
+}
+
+.articlePrice{
+    font-size: 2.0em;
+    font-weight: bolder;
+    text-align: center;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.603);
+    margin-top: 5%;
+}
+
+#formulaire{
+    width: 20%;
+    margin-top: 10%;
+    margin-left: 15%;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formStyle{
+    margin-top: 1%;
+    width: 100%;
+    border: solid 4px;
+    border-radius: 5%;
+}
+.cameraName{
+    font-size: 2.5em;
+    font-weight: bold;
+    color: lawngreen;
+}
+
+#inscription{
+    margin-top: 3%;
+    font-size: 1.3em;
+    border: solid 4px;
+}

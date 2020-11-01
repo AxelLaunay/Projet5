@@ -31,13 +31,20 @@ var id = url.searchParams.get("id");
             }
             var ajoutPannier = document.getElementById("ajoutPannier");
             ajoutPannier.addEventListener("click" , function(){
-                var url = "pagePannier.html?id=" +id
+                //var url = "pagePannier.html?id=" +id
                 var didFound = false
+                var cart = JSON.parse(localStorage.getItem('cart'));
+                if(cart === null) cart = []
                 tableauRadio.forEach((bouton, index) =>{
                     if (bouton.checked) {
-                        url  += "lense=" + index;
-                        window.location.replace(url)
+                        //url  += "&lense=" + index;
+                        
                         didFound = true
+                        cart.push( {
+                                objectID : id,
+                                lense : index
+                            })
+                        localStorage.setItem('cart' , JSON.stringify(cart))
                         return
                     }
                 })
@@ -45,7 +52,7 @@ var id = url.searchParams.get("id");
                     alert("ya r")
                 }
                
-            })
+                window.location.replace('pagePannier.html')})
 
             var positionIMG = document.getElementById("positionIMG");
             var imageUrl = document.createElement("img");
