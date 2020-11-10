@@ -43,5 +43,3 @@ if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
 request.open("GET", "http://localhost:3000/api/cameras");
 request.send();
 
-
-

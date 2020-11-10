@@ -22,25 +22,38 @@
             <section id="basPage">    
                 
                 <section id="infoProduit">
-                    <div id="container"></div>
-                    <div id = "positionName"></div>
-                    <div id = "positionParam"></div>
+                    <div id="container">
+                        <p id = "title">Votre Pannier</p>
+                    </div>
+                       
+                        
                 </section>
 
+                
+
             <!--<div id="separationBare"></div>-->
-                <section id="formulaire">
-                    <!--formulaire parge pannier-->
-                    <form id="form" action="pagecConfirmation.html">
-                        <input type="text" name="prenom" placeholder="Prenom" id="Prenom" class="formStyle" maxlength="20">
-                        <span id="prenomNull"></span>
-                        <input type="text" name="nom" placeholder="Nom" required id="nom" class="formStyle" maxlength="20">
-                        <input type="text" name="age" placeholder="Age" id="age" class="formStyle" maxlength="2">
-                        <input type="email" name="email" placeholder="Email" id="email" class="formStyle" maxlength="30">
-                        <input type="email" name="email2" placeholder="Email Confirmation" id="email2" class="formStyle" maxlength="30">
-                        <input type="text" name="adresse" placeholder="adresse" id="adresse" class="formStyle"maxlength="50">
-                        <input type="submit" value="Acheter" id="inscription">
-                    </form>
-                </section>
+              
+            </section>
+            <section id="formulaire">
+                <!--formulaire parge pannier-->
+                <form id="form" action="pageConfirmation.html">
+                    <input type="text" name="prenom" placeholder="Prenom" id="prenom" class="formStyle" maxlength="20">
+                    <span id="prenomNV"></span>
+                    <input type="text" name="nom" placeholder="Nom" required id="nom" class="formStyle" maxlength="20">
+                    <span id = "nomNV"></span>
+                    <input type="text" name="age" placeholder="Age" id="age" class="formStyle" maxlength="2">
+                    <span id = "ageNV"></span>
+                    <input type="email" name="email" placeholder="Email" id="email" class="formStyle" maxlength="30">
+                    <span id = "emailNV"></span>
+                    <input type="email" name="email2" placeholder="Email Confirmation" id="email2" class="formStyle" maxlength="30">
+                    <span id = "email2NV"></span>
+                    <input type="text" name="adresse" placeholder="adresse" id="adresse" class="formStyle"maxlength="50">
+                    <span id = "adresseNV"></span>
+
+                    <p id = "prixTotal"> Total = <span id = "totalPrice"></span>  </p>
+
+                    <input type="submit" value="Acheter" id="inscription">
+                </form>
             </section>
     </main>
 </body>
