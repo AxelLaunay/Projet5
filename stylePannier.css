@@ -64,7 +64,7 @@ nav:hover .fa-bars{
     z-index: 8;
     border: solid;
     border-radius: 2%;
-    background-color: lawngreen;
+    background-color: rgba(126, 252, 0, 0.664);
     opacity: 95%;
     padding-left: 15%;
     padding-bottom: 32.3%;
@@ -228,4 +228,106 @@ nav:hover .fa-bars{
     font-size: 2.5em;
     font-weight: bold;
     color: lawngreen;
+}
+
+@media all and (max-width: 1024px){
+    .menu {
+        position: absolute;
+        top: -90px;
+        left: -90px;
+        display: flex;
+        width: 170px;
+        height: 170px;
+        margin: 0;
+        border-radius: 100%;
+        opacity: 75%;
+    }
+    
+    .fa-bars {
+        z-index: 10;
+        font-size: 2em;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        cursor: pointer;
+    }
+
+    .backgroundMenuUtilisateur{
+        padding-left: 45%;
+        padding-bottom: 100%;
+    }
+    
+    .comptUtilisateur {
+        font-size: 1em;
+        position: absolute;
+        top: 6%;
+        right: 40%;
+    }
+    
+    .pannierUtilisateur {
+        font-size: 1em;
+        position: absolute;
+        right: 10%;
+        top: 18%;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #infoProduit {
+        width: 93%;
+        margin-left: 0%;
+        margin-top: 26%;
+    }
+
+    .imageCamera {
+        width: 42%;
+        border-right: solid 3px;
+    }
+
+    .cameraName {
+        font-size: 1em;
+        font-weight: bold;
+        color: lawngreen;
+        margin-left: 3%;
+    }
+
+    .lentilChoisi {
+        font-size: 0.5em;
+        width: 100%;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.603);
+    }
+
+    .articlePrice {
+        font-size: 1em;
+        font-weight: bolder;
+        text-align: center;
+        width: 100%;
+        color: rgba(255, 255, 255, 0.603);
+        margin-top: 5%;
+    }
+
+    #formulaire {
+        width: 80%;
+        border: solid 4px;
+        border-radius: 3%;
+        margin-top: 10%;
+        border-color: lawngreen;
+        background-color: rgb(43, 43, 43);
+        padding: 3% 3% 3% 3%;
+        position: initial;
+    }
+
+    .formStyle {
+        margin-top: 2%;
+        width: 100%;
+        border: solid 4px;
+        border-radius: 5%;
+    }
+
 }

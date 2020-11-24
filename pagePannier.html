@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Orinoco Pannier</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="stylePannier.css">
     
@@ -14,26 +15,31 @@
             <i class="fas fa-bars"></i>
                 <div class="menu"></div>
         </nav> 
+       
+            <div class="menuDeroulantUtilisateur">
+                <div class="menuUtilisateur">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="backgroundMenuUtilisateur">
+                    <a href="pageCompt.html" class="comptUtilisateur">Mon Compte</a>
+                    <a  href="accueil.html"class="pannierUtilisateur">acceuil</a>
+                </div>
+            </div>
 
-        <div class="menuDeroulantUtilisateur">
-            <div class="menuUtilisateur">
-                <i class="fas fa-user"></i>
-
-            <section id="basPage">    
-                
-                <section id="infoProduit">
-                    <div id="container">
-                        <p id = "title">Votre Pannier</p>
-                    </div>
-                       
+                <section id="basPage">    
+                    
+                    <section id="infoProduit">
+                        <div id="container">
+                            <p id = "title">Votre Pannier</p>
+                        </div>
                         
-                </section>
+                            
+                    </section>
 
-                
 
             <!--<div id="separationBare"></div>-->
               
-            </section>
+                </section>
             <section id="formulaire">
                 <!--formulaire parge pannier-->
                 <form id="form" action="pageConfirmation.html">
@@ -41,16 +47,17 @@
                     <span id="prenomNV"></span>
                     <input type="text" name="nom" placeholder="Nom" required id="nom" class="formStyle" maxlength="20">
                     <span id = "nomNV"></span>
-                    <input type="text" name="age" placeholder="Age" id="age" class="formStyle" maxlength="2">
+                    <input type="number" name="age" placeholder="Age" id="age" class="formStyle" maxlength="2">
                     <span id = "ageNV"></span>
                     <input type="email" name="email" placeholder="Email" id="email" class="formStyle" maxlength="30">
                     <span id = "emailNV"></span>
-                    <input type="email" name="email2" placeholder="Email Confirmation" id="email2" class="formStyle" maxlength="30">
-                    <span id = "email2NV"></span>
                     <input type="text" name="adresse" placeholder="adresse" id="adresse" class="formStyle"maxlength="50">
-                    <span id = "adresseNV"></span>
+                    <span id = "adresseNV"></span> 
+                    <input type = "text" name = "ville" placeholder="ville" id="ville" class="formStyle" maxlength="40">
+                    <span id="villeNV"></span>
 
                     <p id = "prixTotal"> Total = <span id = "totalPrice"></span>  </p>
+                    <input type="hidden" name="totalPrice" id="prix" > 
 
                     <input type="submit" value="Acheter" id="inscription">
                 </form>

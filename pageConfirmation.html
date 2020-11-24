@@ -4,12 +4,17 @@
     <title>Orinoco</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="styleArticle.css">
+    <link rel="stylesheet" href="styleConfirmation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <script src=""></script>
+   
 </head>
 
 <body>
-    <p> votre commande a bien etait prise en compt. Nous vous remercion de votre achat </p>
-    <a href = "accueil.html"> retoure a la boutique </a>
+    <main>
+        <p> votre commande a bien etait prise en compt au nom de <span id="nom"></span> pour un total de <span id="prix"></span> € .<br>
+            l'identifiant de votre commande est <span id = "identifiant"></span><br>
+             Nous vous remercion de votre achat </p>
+        <a id="magasin" href = "accueil.html"> Retour aux Magasin  </a>
+    </main>
 </body>
+<script src="scriptConfirmation.js"></script>

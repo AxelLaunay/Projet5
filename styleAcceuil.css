@@ -183,3 +183,72 @@ nav:hover .fa-bars{
 .articleDescription{
     text-align: center;
 }
+
+@media all and (max-width: 1024px){
+
+
+
+.menu {
+    position: absolute;
+    top: -90px;
+    left: -90px;
+    display: flex;
+    background-color: #5d5dfc;
+    width: 170px;
+    height: 170px;
+    margin: 0;
+    border-radius: 100%;
+    opacity: 75%;
+}
+
+.fa-bars {
+    z-index: 10;
+    font-size: 2em;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 50%;
+    padding-left: 9%;
+    padding-top: 20%;
+}
+
+.sliderMenu {
+    width: 80%;
+    height: 10%;
+    margin-top: 15%;
+}
+
+.article{
+    width: 75%;
+}
+
+#container{
+    margin-top: 25%;
+}
+
+.backgroundMenuUtilisateur{
+    padding-left: 45%;
+    padding-bottom: 100%;
+}
+
+.comptUtilisateur {
+    font-size: 1em;
+    position: absolute;
+    top: 6%;
+    right: 40%;
+}
+
+.pannierUtilisateur {
+    font-size: 1em;
+    position: absolute;
+    right: 10%;
+    top: 18%;
+}
+
+
+}
+

@@ -1,0 +1,28 @@
+body{
+    width: 99%;
+    height: 99%;
+    background-attachment: fixed;
+    background: rgb(27,27,27);
+    background: linear-gradient(115deg, rgba(27,27,27,1) 0%, rgba(68,68,68,1) 35%, rgba(92,92,92,1) 100%);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16%;
+    margin-bottom: 20%;
+}
+
+p{  
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+a{
+    font-size: 1.5em;
+    color: white;
+    font-style: oblique;
+}

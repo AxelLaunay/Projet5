@@ -4,7 +4,7 @@
 var urlString = window.location.href
 var url = new URL(urlString);
 var id = url.searchParams.get("id");
-    var request = new XMLHttpRequest();
+var request = new XMLHttpRequest();
 
     request.onreadystatechange = function() {
         if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
@@ -50,9 +50,12 @@ var id = url.searchParams.get("id");
                 })
                 if(!didFound){
                     alert("ya r")
+
+                } else {
+                     window.location.replace('pagePannier.html')
                 }
                
-                window.location.replace('pagePannier.html')})
+            })
 
             var positionIMG = document.getElementById("positionIMG");
             var imageUrl = document.createElement("img");

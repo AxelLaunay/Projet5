@@ -12,7 +12,7 @@ var request = new XMLHttpRequest();
                 
                 //console.log(camera.name)
                 
-                cart.forEach(element=>{
+                cart.forEach((element, index)=>{
                     if(element.objectID == camera._id){
                     console.log(element)
 
@@ -20,7 +20,8 @@ var request = new XMLHttpRequest();
 
                         var article = document.createElement("div");
                         article.className = "article"
-
+                        article.id = index
+                        console.log(index)
                         
                         var imageUrl = document.createElement("img");
                         imageUrl.className = "imageCamera";
@@ -34,7 +35,7 @@ var request = new XMLHttpRequest();
         
                         var lense = document.createElement("p");
                         lense.className = "lentilChoisi";
-                        lense.textContent = " " + camera.lenses;
+                        lense.textContent = " " + camera.lenses[element.lense];
                         article.appendChild(lense);
         
                         var price = document.createElement("p");
@@ -42,12 +43,30 @@ var request = new XMLHttpRequest();
                         price.textContent = " " + (camera.price) /100 +" €";
                         article.appendChild(price);
 
+                        var supression = document.createElement("a")
+                        var suprimer = document.createElement("i")
+                        suprimer.className ="fas fa-times"
+                        supression.appendChild(suprimer)
+                        article.appendChild(supression);
+
+                        supression.addEventListener("click" , s_valid)
+                        function s_valid(){
+                            cart.splice(index,1)
+                            console.log(index)
+                            localStorage.setItem('cart' , JSON.stringify(cart))
+                            window.location.reload()
+                        }
+                  
+
                         container.appendChild(article);
 
                         total = total + (camera.price / 100)
                         
                         var totalPrice = document.getElementById("totalPrice")
                         totalPrice.textContent = total + " €"
+
+                        var prix = document.getElementById("prix")
+                        prix.value = total 
 
                         
                     
@@ -68,50 +87,63 @@ var prenom = document.getElementById("prenom");
 var nom = document.getElementById("nom")
 var age = document.getElementById("age")
 var email = document.getElementById("email")
-var email2 = document.getElementById("email2")
 var adresse = document.getElementById("adresse")
+var ville = document.getElementById("ville")
 var validation = document.getElementById("inscription")
 var prenomNV = document.getElementById("prenomNV") //prenom non valide
 var nomNV = document.getElementById("nomNV") // nom non valide
 var emailNV = document.getElementById("emailNV") //email non valide
-var email2NV = document.getElementById("email2NV") 
 var adresseNV = document.getElementById("adresseNV")
-var prenomNomV = /[a-zA-Zéèêëçàùîï]/ // validation du prenom et ddu nom
-var ageV = /[0-9]/ //validation de l'age
-var emailV = /[a-z0-9@.-]/ // validation email
-var adresseV = /[a-zA-Z0-9]/ // validation adresse
+var villeNV = document.getElementById("villeNV")
+var prenomNomV = /[a-zA-Zéèêëçàùîï]$/ // validation du prenom et ddu nom
+var ageV = /^[0-9]*$/ //validation de l'age
+var emailV = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ // validation email
+var adresseV = /[a-zA-Z0-9]$/ // validation adresse
 
 validation.addEventListener("click", f_valid)
 
 function f_valid(e){
 if (prenomNomV.test(prenom.value) == false) {
+    e.preventDefault();
     prenomNV.textContent = "la valeur n'est pas c'elle attendue"
     prenomNV.style.color = "red"
-    e.preventDefault();
+    
+}else{
+    prenomNV.textContent = ""
 }
  if (prenomNomV.test(nom.value) == false) {
+    e.preventDefault();
     nomNV.textContent = "la valeur n'est pas c'elle attendue"
     nomNV.style.color = "red"
-    e.preventDefault();
-}
+ }else{
+     nomNV.textContent= ""
+ }
  if (ageV.test(age.value) == false) {
+    e.preventDefault()
     ageNV.textContent = "la valeur n'est pas c'elle attendue"
     ageNV.style.color = "red"
-    e.preventDefault();
+}else{
+    ageNV.textContent = ""
 }
  if (emailV.test(email.value) == false) {
+    e.preventDefault();
     emailNV.textContent = "la valeur n'est pas c'elle attendue"
     emailNV.style.color = "red"
-    e.preventDefault();
+}else{
+    emailNV.textContent = ""
 }
- if (emailV.test(email2.value) == false) {
-    email2NV.textContent = "la valeur n'est pas c'elle attendue"
-    email2NV.style.color = "red"
+if (adresseV.test(adresse.value) == false) {
     e.preventDefault();
-}
- if (adresseV.test(adresse.value) == false) {
     adresseNV.textContent = "la valeur n'est pas c'elle attendue"
     adresseNV.style.color = "red"
-    e.preventDefault();
+}else{
+    adresseNV.textContent = ""
 }
-} 
+if(prenomNomV.test(ville.value) == false){
+    e.preventDefault();
+    villeNV.textContent = "la valeur n'est pas c'elle attendue"
+    villeNV.style.color = "red"
+}else{
+    villeNV.textContent = " "
+}
+}
